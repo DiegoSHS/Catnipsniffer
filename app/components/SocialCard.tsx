@@ -4,12 +4,12 @@ import { GiSwordClash } from "react-icons/gi";
 import { SiKofi } from "react-icons/si";
 
 const socialLinks = [
-    { name: "Instagram", Icon: FaInstagram, href: "#", color: "from-pink-600 to-rose-600" },
-    { name: "TikTok", Icon: FaTiktok, href: "#", color: "from-black to-gray-100" },
-    { name: "Twitter", Icon: FaXTwitter, href: "#", color: "from-blue-400 to-blue-600" },
-    { name: "Art Fight", Icon: GiSwordClash, href: "#", color: "from-orange-500 to-red-600" },
-    { name: "Ko-fi", Icon: SiKofi, href: "#", color: "from-amber-500 to-yellow-600" },
-    { name: "Free to use pony icons ✨", Icon: FaDownload, href: "#", color: "from-amber-500 to-yellow-600" },
+    { name: "Instagram", Icon: FaInstagram, href: "https://www.instagram.com/catnipsnifferr?igsh=MTd4YmNramU4N2g1Zw%3D%3D&utm_source=qr", color: "from-pink-600 to-rose-600" },
+    { name: "TikTok", Icon: FaTiktok, href: "https://www.tiktok.com/@catnipsnifferz?_r=1&_t=ZN-96ZQ3yIrwEI", color: "from-black to-gray-100" },
+    { name: "Twitter", Icon: FaXTwitter, href: "https://x.com/catnipsniffy?s=21", color: "from-blue-400 to-blue-600" },
+    { name: "Art Fight", Icon: GiSwordClash, href: "https://artfight.net/~catnipsniffer", color: "from-orange-500 to-red-600" },
+    { name: "Ko-fi", Icon: SiKofi, href: "https://ko-fi.com/catnipsnifferr?ref=onboarding_email_founderwelcome", color: "from-amber-500 to-yellow-600" },
+    { name: "Pony icons ✨", Icon: FaDownload, href: "https://drive.google.com/drive/folders/1zYHLifMXk7xeEl8FDkLcvdsIqvv1azYa", color: "from-amber-500 to-yellow-600" },
 ];
 
 export const SocialLink = ({ name, Icon, href, color }: {
@@ -22,9 +22,11 @@ export const SocialLink = ({ name, Icon, href, color }: {
         <Link
             key={name}
             href={href}
+            rel="noopener noreferrer"
+            target="_blank"
             className="w-full group no-underline"
         >
-            <div className={`w-full flex items-center justify-center gap-2 p-4 bg-foreground/5 hover:bg-gradient-to-r ${color} rounded-lg font-semibold text-sm md:text-base hover:shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer
+            <div className={`w-full flex items-center justify-center gap-2 p-4 bg-foreground/5 hover:bg-gradient-to-r ${color} rounded-lg font-semibold text-sm md:text-base hover:shadow-lg hover:scale-102 transition-all duration-200 cursor-pointer
                             `}>
                 <Icon className="text-lg md:text-2xl" />
                 <span className="">{name}</span>
@@ -35,7 +37,7 @@ export const SocialLink = ({ name, Icon, href, color }: {
 
 export function SocialCard() {
     return (
-        <Card className="w-full max-w-3xl text-center">
+        <Card className="w-full max-w-5xl text-center bg-default/50 border-default/50">
             <Card.Header className="flex flex-col md:flex-row items-center gap-3">
                 <Avatar className="w-20 h-20 md:w-24 md:h-24 rounded-full flex-shrink-0" aria-hidden>
                     <Avatar.Image src="profile.jpg" />

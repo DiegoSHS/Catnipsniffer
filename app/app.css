@@ -8,7 +8,7 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply dark:bg-default;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
@@ -18,6 +18,13 @@ body {
 .gradient-background {
   margin: 0;
   background: linear-gradient(-45deg, #f06b76, #adaaad, #686769, #962c2c);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+.gradient-background-alt {
+  margin: 0;
+  background: linear-gradient(-45deg, #2e2e2e, #f06b76, #686769, #fddc7d);
   background-size: 400% 400%;
   animation: gradientMove 15s ease infinite;
 }

@@ -33,11 +33,11 @@ export function Welcome() {
   return (
     <main className="flex flex-col items-center justify-center pt-16 pb-4">
       <SectionTitle title="Catnipsniffer socials" />
-      <section className="flex w-full  items-center justify-center p-10">
+      <section className="flex gradient-background-alt w-full  items-center justify-center p-10">
         <SocialCard />
       </section>
-      <SectionTitle title="Some of My Work" />
-      <section className="flex gradient-background w-full items-center justify-center p-10">
+      <section className="flex flex-col gradient-background w-full items-center justify-center p-10">
+        <SectionTitle title="Some of My Work" />
         <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {images.map(({ image, url }) => {
             return (
@@ -100,7 +100,7 @@ export function Welcome() {
               </ul>
             </Card.Content>
           </Card>
-          <Card>
+          <Card className="bg-green-500/10 border-green-500/50">
             <Card.Header>
               <Card.Title className="text-xl md:text-2xl font-bold">Payment</Card.Title>
             </Card.Header>
