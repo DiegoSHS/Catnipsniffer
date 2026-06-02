@@ -1,7 +1,7 @@
 import { Card } from "@heroui/react";
-import { ImageCard } from "~/components/ImageCard";
-import { SectionTitle } from "~/components/SectionTitle";
-import { SocialCard } from "~/components/SocialCard";
+import { SectionTitle } from "./SectionTitle";
+import { SocialCard } from "./SocialCard";
+import { ImageCard } from "./ImageCard";
 
 export function Welcome() {
   const images = [
