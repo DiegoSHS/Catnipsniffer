@@ -7,7 +7,7 @@ export const ImageCard = ({ src = "image.png", url }: { src: string, url?: strin
         >
             <Link className="w-full h-full p-0 m-0 no-underline" href={url || "#"} target="_blank" rel="noopener noreferrer">
                 <img
-                    alt="NEO Home Robot"
+                    alt="Image card"
                     aria-hidden="true"
                     className="brightness-75 hover:brightness-100 absolute inset-0 h-full w-full object-cover aspect-square"
                     src={src}
