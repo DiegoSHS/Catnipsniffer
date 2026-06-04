@@ -5,15 +5,16 @@ import { SiKofi } from "react-icons/si";
 import type { SocialInput } from "../types";
 
 const socialMapper = [
-    { name: "instagram", Icon: FaInstagram, href: "https://www.instagram.com/catnipsnifferr?igsh=MTd4YmNramU4N2g1Zw%3D%3D&utm_source=qr", color: "from-pink-600 to-rose-600" },
-    { name: "tiktok", Icon: FaTiktok, href: "https://www.tiktok.com/@catnipsnifferz?_r=1&_t=ZN-96ZQ3yIrwEI", color: "from-black to-gray-100" },
-    { name: "twitter", Icon: FaXTwitter, href: "https://x.com/catnipsniffy?s=21", color: "from-blue-400 to-blue-600" },
-    { name: "art fight", Icon: GiSwordClash, href: "https://artfight.net/~catnipsniffer", color: "from-orange-500 to-red-600" },
-    { name: "ko-fi", Icon: SiKofi, href: "https://ko-fi.com/catnipsnifferr?ref=onboarding_email_founderwelcome", color: "from-amber-500 to-yellow-600" },
-    { name: "pony icons ✨", Icon: FaLink, href: "https://drive.google.com/drive/folders/1zYHLifMXk7xeEl8FDkLcvdsIqvv1azYa", color: "from-amber-500 to-yellow-600" },
+    { name: "instagram", Icon: FaInstagram },
+    { name: "tiktok", Icon: FaTiktok },
+    { name: "twitter", Icon: FaXTwitter },
+    { name: "art fight", Icon: GiSwordClash },
+    { name: "ko-fi", Icon: SiKofi },
+    { name: "pony icons ✨", Icon: FaLink },
 ];
 
-export const SocialLink = ({ name, Icon, href, color }: {
+
+const SocialLink = ({ name, Icon, href, color }: {
     name: string,
     Icon: React.ElementType,
     href: string,
@@ -36,7 +37,11 @@ export const SocialLink = ({ name, Icon, href, color }: {
     )
 }
 
-export const SocialLinks = ({ socials }: { socials: SocialInput[] }) => {
+interface SocialLinksProps {
+    socials?: SocialInput[]
+}
+
+export const SocialLinks = ({ socials = [] }: SocialLinksProps) => {
     if (socials.length === 0) return (
         <p className="text-sm text-gray-400 italic">No socials added yet. Edit your profile to add them!</p>
     )
